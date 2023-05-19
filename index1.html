@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interest Calculator</title>
+  <link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+<body>
+  <h1>Interest Calculator</h1>
+  <div class="calculator">
+    <label for="principal">Principal Amount:</label>
+    <input type="number" id="principal" placeholder="Enter principal amount">
+
+    <label for="interestRate">Interest Rate:</label>
+    <input type="number" id="interestRate" placeholder="Enter interest rate">
+
+    <label for="startDate">Starting Date:</label>
+    <input type="date" id="startDate">
+
+    <label for="endDate">Ending Date:</label>
+    <input type="date" id="endDate">
+
+    <button onclick="calculateSimpleInterest()">Calculate Simple Interest</button>
+    <button onclick="calculateCompoundInterest()">Calculate Compound Interest</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
