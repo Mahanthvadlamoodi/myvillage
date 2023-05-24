@@ -32,8 +32,8 @@ function calculateSimpleInterest() {
   }
   
   function calculateDuration(startDate, endDate) {
-    var timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
-    var durationInYears = timeDiff / (1000 * 3600 * 24 * 365.25); // Assuming a year has an average of 365.25 days
+    var timeDiff = Math.abs(endDate.getDate() - startDate.getDate());
+    var durationInYears = timeDiff / ( 360); // Assuming a year has an average of 365.25 days
   
     return durationInYears;
   }
