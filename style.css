@@ -1,57 +1,105 @@
 .container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 13vh;
-    margin-top: 80px;
-    
-  }
-  body{
-    background-color: rgb(12, 12, 12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 80px;
+}
+
+body {
+  background: radial-gradient(circle at center, #0e0360, #05051c);
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 24px;
+  background: radial-gradient(circle at center, #fb0101, #050000);
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background: radial-gradient( #06a8c1fa, #2e0b97);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    margin-top: 30px;
+    height: auto;
+    padding: 20px;
   }
 
-  
   .button {
-    display: inline-block;
-    padding: 20px 24px;
-    background-color: #d81515;
-    color: #eee6e6;
-    font-size: 35px;
-    text-decoration: none;
-    border-radius: 40px;
-    margin: 10px;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 20px;
+    padding: 12px 16px;
   }
-  
-  .button:hover {
-    background-color: #0056b3;
+}
+
+/* Media query for iPhones */
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    margin-top: 30px;
+    height: auto;
+    padding: 20px;
   }
-  
-  /* Media query for mobile devices */
-  @media (max-width: 767px) {
-    .container {
-      flex-direction: column;
-      margin-top: 800px;
-    }
-  
-    .button {
-      width: 300px;
-    }
+
+  .button {
+    width: 100%;
+    font-size: 20px;
+    padding: 12px 16px;
   }
-  
-  /* Media query for desktop devices */
-  @media (min-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-      
-    }
-  
-    .button {
-      width: 330px;
-      font-weight: bold;
-      text-align: center;
-      align-items: center;
-    }
+}
+
+/* Media query for iPads and tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    flex-direction: column;
+    margin-top: 50px;
+    height: auto;
+    padding: 40px;
   }
-  
+
+  .button {
+    width: 70%;
+    font-size: 24px;
+    padding: 16px 20px;
+  }
+}
+
+/* Media query for laptops */
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .container {
+    margin-top: 80px;
+  }
+
+  .button {
+    width: 330px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+/* Media query for desktops */
+@media (min-width: 1366px) {
+  .container {
+    margin-top: 80px;
+  }
+
+  .button {
+    width: 400px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
